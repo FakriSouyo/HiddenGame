@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Your existing meta tags and styles -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tebak Gambar</title>
+  <style>
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          text-align: center;
+          margin: 50px;
+          background-color: #f5f5f5;
+        }
+    
+        h1 {
+          color: #333;
+        }
+    
+        img {
+          max-width: 100%;
+          height: auto;
+          margin-top: 20px;
+          border: 2px solid #ddd;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        form {
+          margin-top: 20px;
+        }
+    
+        label {
+          display: block;
+          margin-bottom: 8px;
+          color: #555;
+        }
+    
+        input {
+          padding: 10px;
+          width: 200px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          margin-bottom: 10px;
+          box-sizing: border-box;
+        }
+    
+        .check-button {
+          background-color: #4caf50;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          text-decoration: none; 
+        }
+    
+        .check-button:hover {
+          background-color: #45a049;
+        }
+    
+        .check-button:disabled {
+          background-color: #aaa;
+          cursor: not-allowed;
+        }
+    
+        #b {
+          margin-top: 20px;
+          color: #333;
+          font-weight: bold;
+        }
+
+        #navigationMessage {
+          margin-top: 10px;
+          color: #777;
+        }
+        
+        #gambarBuka {
+          display: none;
+        }
+      </style>
+ 
+</head>
+<body>
+
+<!-- Your existing HTML content -->
+
+<h1>Tebak Gambar</h1>
+<img id="gambarBuka" src="/img/ap.jpg" alt="Tebak Gambar">
+<form id="tebakForm">
+  <label for="Buka">Tebakan Anda:</label>
+  <input type="text" id="Buka" name="Buka" required>
+  <button type="button" class="check-button" onclick="cekBuka()">Check</button>
+</form>
+
+<p id="b"></p>
+<p id="navigationMessage"></p>
+
+<script>function cekBuka(){var s=document.getElementById('Buka').value.toLowerCase();if(s==='tutup'){document.getElementById('b').innerText='Jawaban Benar!';var navigationLink=document.createElement('a');navigationLink.className='check-button';navigationLink.href='/ketigaa';navigationLink.innerText='Terakhir';navigationLink.target='_blank';document.getElementById('tebakForm').appendChild(navigationLink);document.querySelector('.check-button').disabled=true;document.getElementById('navigationMessage').innerHTML='Berkunjung dulu kesini sebelum lanjut: '+'<a href="https://github.com/FakriSouyo/KeamananSiber.git" target="_blank">https://github.com/FakriSouyo/KeamananSiber.git</a>';}else{document.getElementById('b').innerText='Salah Wkwkw';}}</script>
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "hidden-directory-challenge",
+  "version": "1.0.0",
+  "description": "Hidden Directory Challenge",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.2"
+  }
+}

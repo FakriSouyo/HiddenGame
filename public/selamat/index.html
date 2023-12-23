@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keamanan Siber</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      overflow: hidden; /* Menghilangkan scroll horizontal */
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative; /* Menetapkan posisi relatif untuk mengatur posisi absolut dari rainbow cat */
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #333;
+    }
+
+ 
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <img src="/img/123.jpg" alt="">
+  <p>Terimakasih Pak Alam telah mengajar keamanan siber dengan metode yang baik yang dimana bisa mengasah critical thinking kami.</p>
+  <button onclick="downloadFile()">ini passwordnya wkwk</button>
+</div>
+
+<script>
+  function downloadFile() {
+    // Use an absolute path or a path relative to the root of your server
+    var filePath = "/password.py";
+
+    var link = document.createElement('a');
+    link.href = filePath;
+    link.download = 'password.py';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+</script>
+
+</body>
+</html>

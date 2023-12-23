@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keamanan Siber</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #4285f4; /* Google Blue */
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        strong {
+            font-weight: bold;
+            color: #3d3d3d;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 16px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4285f4; /* Google Blue */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Tapi Boong wkwk</h1>
+    <h3>Apaaaa ini yo</h3>
+    <p>Algoritma yang digunakan oleh sistem kriptografi simetri dan digunakan jauh sebelum sistem kriptografi public key ditemukan dan saya adalah kelompok berapa di keamanan siber </p>
+    <p><strong>Pjfrfsfs Xngjw Qzrfdfs Xjwz qfm df</strong></p>
+    
+    <form onsubmit="checkAnswer(); return false;">
+        <label for="answer">Your Answer:</label>
+        <input type="text" id="answer" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="result"></p>
+
+    <div id="buttonContainer" style="display: none;">
+        <button onclick="goToFinalPage()">ini Terakhir serius wkwk</button>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            var userInput = document.getElementById('answer').value;
+            var encryptedFlag = "Pjfrfsfs Xngjw Qzrfdfs Xjwz qfm df";
+
+            var decryptedFlag = "";
+            for (var i = 0; i < encryptedFlag.length; i++) {
+                var charCode = encryptedFlag.charCodeAt(i);
+                if (charCode >= 65 && charCode <= 90) {
+                    decryptedFlag += String.fromCharCode(((charCode - 65 + 21) % 26) + 65);
+                } else if (charCode >= 97 && charCode <= 122) {
+                    decryptedFlag += String.fromCharCode(((charCode - 97 + 21) % 26) + 97);
+                } else {
+                    decryptedFlag += String.fromCharCode(charCode);
+                }
+            }
+
+            var resultMessage = (userInput === decryptedFlag) ? "Correct! You've found the flag: PicoKeamananSiber{M47kUl_Y4NG_s4NGT_Ser!!}" : "Sorry, try again.";
+            document.getElementById('result').innerText = resultMessage;
+
+            if (userInput === decryptedFlag) {
+                // Tampilkan tombol jika jawaban benar
+                document.getElementById('buttonContainer').style.display = 'block';
+            }
+        }
+
+        function goToFinalPage() {
+            // Mengganti URL sesuai dengan tujuan lanjut ke halaman /Akhir
+            window.location.href = '/Akhir';
+        }
+    </script>
+</body>
+</html>

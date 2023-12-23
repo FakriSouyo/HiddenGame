@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pico Challenge</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center; /* Center the heading */
+    }
+
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sudah aku bilang mencatat itu penting</h1>
+
+  <form id="picoForm" action="/selamat" method="post" onsubmit="return validateForm()">
+    <label for="inputField1">Flag 1:</label>
+    <input type="text" id="inputField1" name="inputField1" required>
+
+    <label for="inputField2">Flag 2:</label>
+    <input type="text" id="inputField2" name="inputField2" required>
+
+    <label for="inputField3">Flag 3:</label>
+    <input type="text" id="inputField3" name="inputField3" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      var input1 = document.getElementById('inputField1').value;
+      var input2 = document.getElementById('inputField2').value;
+      var input3 = document.getElementById('inputField3').value;
+
+      if (input1 === 'PicoUMY{KEl0mp0K_5_N1h_Bo5s}' && input2 === 'PicoUMY{Th4nk5_O5aM4_4nd_W1Ld4N}' && input3 === 'PicoKeamananSiber{M47kUl_Y4NG_s4NGT_Ser!!}') {
+        // Redirect to the "/selamat" page
+        window.location.href = "/selamat";
+        return false; // Prevent form submission (optional)
+      } else {
+        // If the answers are incorrect, display an alert
+        alert('Sudah dibilang mencatat itu penting');
+        return false;
+      }
+    }
+  </script>
+
+</body>
+</html>
